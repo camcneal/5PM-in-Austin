@@ -1,27 +1,62 @@
-# Basic Build with NPM scripts
-This is a project scaffolding and build tool for the TIY Austin Front-End Engineering course. Feel free to use and enjoy! Feedback and PRs welcome!
+#### Elavator Pitch:
+This app is designed to allow users to socailly search, review, and rate their favorite movies. 
 
-## Features
-- A bare bones scaffolding for an SPA, without any libraries built in
-- A static server for serving up your dev environment via http
-- `app` directory for development, preloaded with an `index.html`, `scripts/entry.js`, `scss/main.scss` and `assets/`
-- `docs` directory for deployable code via gh-pages
-- es2015 and babel, including module syntax
-- mocha test runner
-- sass (.scss)
+#### Basic features:
+- Login/Signup 
+- Search Movies option: user movie search
+- Movie Profile: Page with m ovie poster, shot plot summary and rotten tomatoes ratings. Buttons that allow users to add movies to a watched or watn to watch list. 
+- User Profile: List the users Name, followers, movie ratings and reviews.Along with wacthed and want to watch list. 
+- Watched page: List of movies the user has watched
+- Want to watch page: List of movies the user plans to watch
+- User Search: shows users theyre following and searches for users to follow. 
 
-## Installation
-- Clone this repo (or fork then clone, if you prefer)
-- Remove the git history by running `rm -rf .git`
-- Set up a new git repo
-- Run `npm install`
-- if you get permission errors you may need to run `sudo npm install` to install a couple global dependencies
+#### Apis:
+- Backendless
+- omdbapi.com
 
-## Use
-- `npm install` will scaffold your project AND start the dev server
-- `npm start` will start the dev server and watch for changes
-- `npm test` will run any test files included in the test folder
-- When the server is running, your site will be live on [http://localhost:8080/](http://localhost:8080/)
+#### Data Modeling:
+- User Model
+```javascript
+{
+name:'',
+watched:[
+  {
+  movieid:
+  title:
+  }
+],
+future_watch:[
+ {
+  movieid:
+  title:
+  }
+],
+}
+followers:[
+  {
+  userid:
+  name:
+  }
+]
+```
+- Movie Collection:
+```javascript
+{
+search(s) {
+  this.fetch({
+    data:{
+      s:s
+      })
+  }
+```
+#### Routes:
+- Login
+- Search
+- Movie Page 
+- User Profile
+- Watched
+- Future_Watch
+- User Search
 
-## Dependencies
-- `sass` [install guide here](http://sass-lang.com/install)
+
+  
